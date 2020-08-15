@@ -1,4 +1,6 @@
 import pytest
+from suffix_tree import SuffixTree
 
 def test_build_tree():
-    pass
+    x = SuffixTree('abcd')
+    print(x)
