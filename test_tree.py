@@ -1,10 +1,7 @@
 import pytest
 from suffix_tree import SuffixTree
 
-def test_build_tree():
-    x = SuffixTree('abcd')
-
-def test_str():
-    x = SuffixTree('abc')
-    s = str(x)
-    print(s)
+def test_implicit():
+    st = SuffixTree('abcd')
+    st_d = st.as_dict()
+    assert(st_d == {'d': {}, 'cd': {}, 'bcd': {}, 'abcd': {}})
