@@ -5,3 +5,7 @@ def test_implicit():
     st = SuffixTree('abcd')
     st_d = st.as_dict()
     assert(st_d == {'d': {}, 'cd': {}, 'bcd': {}, 'abcd': {}})
+
+    st = SuffixTree('xabxa')
+    st_d = st.as_dict()
+    assert(st_d == {'bxa': {}, 'abxa': {}, 'xabxa': {}})
